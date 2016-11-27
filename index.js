@@ -42,7 +42,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-var port = process.env.PORT || 1337;
+var port = process.env.OPENSHIFT_NODEJS_PORT || 1337;
 var httpServer = require('http').createServer(app);
 httpServer.listen(port, function() {
     httpServer.timeout = 0;
